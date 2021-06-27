@@ -16,8 +16,9 @@ A repository full of random stuff that didn't deserve/need its own repository.
 
 ## Python
 
-| Name                                   | Description                                                  |
-| -------------------------------------- | ------------------------------------------------------------ |
-| [j0bz](/python/j0bz)                   | Starts an project directory and does a bunch of scanning (primarily for reporting/evidencing). |
-| [parse_hashcat](/python/parse_hashcat) | Read in secretsdump.py and hashcat cracked passwords output and matches them up. |
+| Name                                                   | Description                                                  |
+| ------------------------------------------------------ | ------------------------------------------------------------ |
+| [j0bz](/python/j0bz)                                   | Starts an project directory and does a bunch of scanning (primarily for reporting/evidencing). |
+| [parse_hashcat](/python/parse_hashcat)                 | Read in secretsdump.py and hashcat cracked passwords output and matches them up. |
+| [ntlm-http-header-enum](/python/ntlm-http-header-enum) | [Byt3Bl33d3r's code](https://github.com/byt3bl33d3r/SprayingToolkit/blob/0838df444ab237d7c55ee2397d60ec6118f4dd77/core/sprayers/owa.py) originally, used for pulling the leaked Internal Domain Name. |
 
