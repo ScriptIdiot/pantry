@@ -30,11 +30,6 @@ A repository full of random stuff that didn't deserve/need its own repository. S
 |            Name            |                         Description                          |
 | :------------------------: | :----------------------------------------------------------: |
 | [Inject0r](/cpp/Inject0r/) | Few different methods of doing Allocation and Execution during Process Injection :zap: |
-|                            |                                                              |
-|                            |                                                              |
-|                            |                                                              |
-
-
 
 ## Python
 
