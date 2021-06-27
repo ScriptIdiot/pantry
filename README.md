@@ -16,8 +16,8 @@ A repository full of random stuff that didn't deserve/need its own repository.
 
 ## Python
 
-| Name                 | Description                                                  |
-| -------------------- | ------------------------------------------------------------ |
-| [j0bz](/python/j0bz) | Starts an project directory and does a bunch of scanning (primarily for reporting/evidencing). |
-|                      |                                                              |
+| Name                                   | Description                                                  |
+| -------------------------------------- | ------------------------------------------------------------ |
+| [j0bz](/python/j0bz)                   | Starts an project directory and does a bunch of scanning (primarily for reporting/evidencing). |
+| [parse_hashcat](/python/parse_hashcat) | Read in secretsdump.py and hashcat cracked passwords output and matches them up. |
 
