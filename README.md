@@ -16,12 +16,12 @@ A repository full of random stuff that didn't deserve/need its own repository.
 
 ## C#
 
-|         Name         |               Description                |
-| :------------------: | :--------------------------------------: |
-| [Sift](/csharp/Sift) | A .NET method of sifting through Shares! |
-|                      |                                          |
-|                      |                                          |
-|                      |                                          |
+|                Name                |               Description                |
+| :--------------------------------: | :--------------------------------------: |
+|        [Sift](/csharp/Sift)        | A .NET method of sifting through Shares! |
+| [CMSTPBypass](/csharp/CMSTPBypass) |          UAC Bypass with CMSTP           |
+|                                    |                                          |
+|                                    |                                          |
 
 
 
