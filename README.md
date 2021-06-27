@@ -12,17 +12,18 @@
 
 # Pantry
 
-A repository full of random stuff that didn't deserve/need its own repository.
+A repository full of random stuff that didn't deserve/need its own repository. Some of the things in here may not work perfecty, but I thought the code would be useful to *someone* so it made it into the pantry.
 
 ## C#
 
-|                Name                |               Description                |
-| :--------------------------------: | :--------------------------------------: |
-|        [Sift](/csharp/Sift)        | A .NET method of sifting through Shares! |
-| [CMSTPBypass](/csharp/CMSTPBypass) |          UAC Bypass with CMSTP           |
-|  [CSharpExec](/csharp/CSharpExec)  |         PSExec, but its in C#...         |
-| [CSharpRunAs](/csharp/CSharpRunAs) |         runas, but its in C#....         |
-|     [ad_enum](/csharp/ad_enum)     | Grab users, computers, trusts, etc :zzz: |
+|                Name                |                         Description                          |
+| :--------------------------------: | :----------------------------------------------------------: |
+|        [Sift](/csharp/Sift)        |           A .NET method of sifting through Shares!           |
+| [CMSTPBypass](/csharp/CMSTPBypass) |                    UAC Bypass with CMSTP                     |
+|  [CSharpExec](/csharp/CSharpExec)  |                   PSExec, but its in C#...                   |
+| [CSharpRunAs](/csharp/CSharpRunAs) |                   runas, but its in C#....                   |
+|     [ad_enum](/csharp/ad_enum)     |           Grab users, computers, trusts, etc :zzz:           |
+|    [Corellia](/csharp/Corellia)    | AD Long Hanging Fruit: Kerberoast, Descriptions and GPPPassword :apple: |
 
 
 
