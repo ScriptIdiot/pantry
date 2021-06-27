@@ -21,4 +21,6 @@ A repository full of random stuff that didn't deserve/need its own repository.
 | [j0bz](/python/j0bz)                                   | Starts an project directory and does a bunch of scanning (primarily for reporting/evidencing). |
 | [parse_hashcat](/python/parse_hashcat)                 | Read in secretsdump.py and hashcat cracked passwords output and matches them up. |
 | [ntlm-http-header-enum](/python/ntlm-http-header-enum) | [Byt3Bl33d3r's code](https://github.com/byt3bl33d3r/SprayingToolkit/blob/0838df444ab237d7c55ee2397d60ec6118f4dd77/core/sprayers/owa.py) originally, used for pulling the leaked Internal Domain Name. |
+| [surfer](/python/surfer)                               | This is a project to replace `SimpleHTTPServer` for myself. Got fed up of constantly bringing it up and down and remember paths to things. This manages all that. |
+| [topcat](/python/topcat)                               | I once had an engagement where there was over 200 instances of Tomcat... This automates the password spraying :boom: |
 
