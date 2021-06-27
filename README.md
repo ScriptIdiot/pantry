@@ -25,6 +25,15 @@ A repository full of random stuff that didn't deserve/need its own repository. S
 |     [ad_enum](/csharp/ad_enum)     |           Grab users, computers, trusts, etc :zzz:           |
 |    [Corellia](/csharp/Corellia)    | AD Long Hanging Fruit: Kerberoast, Descriptions and GPPPassword :apple: |
 
+## C++
+
+|            Name            |                         Description                          |
+| :------------------------: | :----------------------------------------------------------: |
+| [Inject0r](/cpp/Inject0r/) | Few different methods of doing Allocation and Execution during Process Injection :zap: |
+|                            |                                                              |
+|                            |                                                              |
+|                            |                                                              |
+
 
 
 ## Python
