@@ -20,7 +20,7 @@ A repository full of random stuff that didn't deserve/need its own repository.
 | :--------------------------------: | :--------------------------------------: |
 |        [Sift](/csharp/Sift)        | A .NET method of sifting through Shares! |
 | [CMSTPBypass](/csharp/CMSTPBypass) |          UAC Bypass with CMSTP           |
-|                                    |                                          |
+|  [CSharpExec](/csharp/CSharpExec)  |         PSExec, but its in C#...         |
 |                                    |                                          |
 
 
