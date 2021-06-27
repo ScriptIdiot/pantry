@@ -1,0 +1,70 @@
+{"services": 
+	{
+		"ftp":{
+			"name": "File Transfer Protocol",
+			"protocol": "tcp",
+			"scripts": ["ftp-anon"],
+			"ports": [21,2121]
+		},
+		"telnet":{
+			"name": "Telnet",
+			"protocol": "tcp",
+			"scripts": [],
+			"ports": [23,2323]
+		},
+		"ssh":{
+			"name": "Secure Shell",
+			"protocol": "tcp",
+			"scripts": ["ssh2-enum-algos", "ssh-auth-methods", "sshv1", "ssh-publickey-acceptance"],
+			"ports": [22,222,2222]
+		},
+		"http":{
+			"name": "Hyper-Text Transfer Protocol",
+			"protocol": "tcp",
+			"scripts": ["http-adobe-coldfusion-apsa1301", "http-aspnet-debug", "http-barracuda-dir-traversal", "http-bigip-cookie", "http-cakephp-version", "http-chrono", "http-cisco-anyconnect", "http-coldfusion-subzero", "http-dlink-backdoor", "http-domino-enum-passwords", "http-drupal-enum", "http-drupal-enum-users", "http-enum", "http-git", "http-gitweb-projects-enum", "http-headers", "http-hp-ilo-info", "http-huawei-hg5xx-vuln", "http-iis-webdav-vuln", "http-internal-ip-disclosure", "http-majordomo2-dir-traversal", "http-methods", "http-ntlm-info", "http-phpmyadmin-dir-traversal", "http-php-version", "http-robots.txt", "http-security-headers", "http-server-header", "http-shellshock", "https-redirect", "http-svn-enum", "http-svn-info", "http-title", "http-tplink-dir-traversal", "http-vhosts", "http-webdav-scan", "http-wordpress-enum", "http-wordpress-users", "ssl-enum-ciphers", "sslv2"],
+			"ports": [80,81,82,443,4443,4343,8000,8001,8080,8081,8888,8501,514,3000,8443,8505]
+		},
+		"smb":{
+			"name": "Server Message Block",
+			"protocol": "tcp",
+			"scripts": ["smb2-capabilities", "smb2-security-mode", "smb2-time", "smb-os-discovery", "smb-protocols", "smb-security-mode", "smb-vuln-ms08-067", "smb-vuln-ms17-010", "smb-vuln-webexec"],
+			"ports": [139,445]
+		},
+		"mssql":{
+			"name": "Microsoft SQL",
+			"protocol": "tcp",
+			"scripts": ["ms-sql-info", "ms-sql-ntlm-info", "ms-sql-query"],
+			"ports": [1433,1434]
+		},
+		"rdp":{
+			"name": "Remote Desktop Protocol",
+			"protocol": "tcp",
+			"scripts": ["rdp-enum-encryption", "rdp-ntlm-info"],
+			"ports": [3389]
+		},
+		"smtp":{
+			"name": "Simple Mail Transfer Protocol",
+			"protocol": "tcp",
+			"scripts": ["smtp-commands", "smtp-open-relay"],
+			"ports": [25]
+		},
+		"rmi": {
+			"name": "Remote Method Invocation",
+			"protocol": "tcp",
+			"scripts": ["rmi-dumpregistry", "rmi-vuln-classloader"],
+			"ports": [1098, 1099]
+		},
+		"snmp": {
+			"name": "Simple Network Management Protocol",
+			"protocol": "udp",
+			"scripts": ["snmp-info", "snmp-interfaces", "snmp-processes", "snmp-win32-users", "snmp-win32-software"],
+			"ports": [161,162]
+		},
+		"nfs": {
+			"name": "Network File System",
+			"protocol": "udp",
+			"scripts": ["nfs-ls", "nfs-showmount"],
+			"ports": [2049]
+		}
+	}
+}
