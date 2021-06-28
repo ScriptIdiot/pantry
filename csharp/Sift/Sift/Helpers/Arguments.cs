@@ -17,6 +17,8 @@ namespace Sift.Helpers
         public static Boolean Randomise = false;
         public static List<String> Extensions = new List<string> { "ps1", "docx", "docm", "xlsx", "xlsm", "xls", "hta", "vba", "vbs" };
         public static List<String> Keywords = new List<string>();
+        public static List<String> IncludeShares = new List<string>();
+        public static List<String> ExcludeShares = new List<string>();
         private static Boolean parseError = false;
 
         public static bool ParseArguments(string[] args)
@@ -100,6 +102,22 @@ namespace Sift.Helpers
                 if (argument.Key == "-keywords")
                 {
                     Keywords = ParseList(argument.Key, argument.Value);
+                    if (parseError)
+                    {
+                        return false;
+                    }
+                }
+                if (argument.Key == "-shares")
+                {
+                    IncludeShares = ParseList(argument.Key, argument.Value);
+                    if (parseError)
+                    {
+                        return false;
+                    }
+                }
+                if (argument.Key == "-eshares")
+                {
+                    ExcludeShares = ParseList(argument.Key, argument.Value);
                     if (parseError)
                     {
                         return false;
@@ -192,7 +210,7 @@ namespace Sift.Helpers
             {
                 parsed = value.Split(',').ToList();
             }
-            catch (Exception e)
+            catch
             {
                 Logger.Print(Logger.STATUS.ERROR, "Failed to split extensions on commas!");
             }

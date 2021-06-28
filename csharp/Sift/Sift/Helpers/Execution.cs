@@ -4,12 +4,13 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Security.Principal;
+using System.Threading.Tasks;
 
 namespace Sift.Helpers
 {
     internal class Execution
     {
-        private static List<String> output = new List<string>();
+        private static readonly List<String> output = new List<string>();
 
         public static void Execute(List<String> targets)
         {
@@ -51,11 +52,41 @@ namespace Sift.Helpers
         private static void CheckShare(string target)
         {
             Logger.Print(Logger.STATUS.GOOD, String.Format("Shares ({0}): ", target));
-            List<String> shares = Network.EnumNetShares(target);
+            List<String> shares = new List<string>();
+
+            if (Arguments.IncludeShares.Count > 0)
+            {
+                shares = Arguments.IncludeShares;
+            }
+            else
+            {
+                shares = Network.EnumNetShares(target);
+
+            }
+
+            for (int i = 0; i < shares.Count; i++)
+            {
+                foreach(string eshare in Arguments.ExcludeShares)
+                {
+                    if(eshare.ToLower().Equals(shares[i].ToLower()))
+                    {
+                        Logger.Print(Logger.STATUS.INFO, "Skipping: " + shares[i]);
+                        shares.RemoveAt(i);
+                    }
+                }
+            }
+
+            if(shares.Count == 0)
+            {
+                Logger.Print(Logger.STATUS.ERROR, "No shares to look at!");
+                return;
+            }
+
             foreach (string share in shares)
             {
                 Logger.Print(Logger.STATUS.INFO, share);
             }
+
             Console.WriteLine();
             ReadDataInShares(target, shares);
             return;
@@ -70,15 +101,16 @@ namespace Sift.Helpers
                 Logger.Print(Logger.STATUS.GOOD, "Searching for: " + String.Join(", ", Arguments.Keywords.ToArray()));
             }
 
+            Console.WriteLine();
+
             List<string> allFiles = new List<string>();
 
-            foreach (string share in shares)
+            Parallel.ForEach(shares, share =>
             {
-                Logger.Print(Logger.STATUS.INFO, "Processing: " + share);
                 string path = string.Format("\\\\{0}\\{1}", target, share);
                 DirSearch(path);
                 allFiles.AddRange(output);
-            }
+            });
 
             if (!string.IsNullOrEmpty(Arguments.Outfile))
             {
@@ -91,18 +123,50 @@ namespace Sift.Helpers
 
         private static void DirSearch(string sDir)
         {
+            // This: https://docs.microsoft.com/en-US/dotnet/csharp/programming-guide/file-system/how-to-iterate-through-a-directory-tree#robust-programming
+            Stack<string> dirs = new Stack<string>(20);
+
             Boolean useKeywords = false;
             if (Arguments.Keywords.Count > 0)
             {
                 useKeywords = true;
             }
 
-            try
+            if (!Directory.Exists(sDir))
             {
-                foreach (string d in Directory.GetDirectories(sDir))
+                throw new ArgumentException();
+            }
+            dirs.Push(sDir);
+
+            while (dirs.Count > 0)
+            {
+                string currentDir = dirs.Pop();
+                string[] subDirs;
+                try
                 {
-                    foreach (string f in Directory.GetFiles(d))
+                    subDirs = Directory.GetDirectories(currentDir);
+                }
+                catch
+                {
+                    continue;
+                }
+
+                string[] files;
+                try
+                {
+                    files = Directory.GetFiles(currentDir);
+                }
+                catch
+                {
+                    continue;
+                }
+
+                foreach (string file in files)
+                {
+                    try
                     {
+                        FileInfo fi = new FileInfo(file);
+                        string f = fi.FullName;
                         if (useKeywords)
                         {
                             if (CheckExtension(f))
@@ -123,12 +187,13 @@ namespace Sift.Helpers
                             }
                         }
                     }
-                    DirSearch(d);
+                    catch
+                    {
+                        continue;
+                    }
                 }
-            }
-            catch
-            {
-                return;
+                foreach (string str in subDirs)
+                    dirs.Push(str);
             }
 
             return;
@@ -138,7 +203,7 @@ namespace Sift.Helpers
         {
             foreach (string ext in Arguments.Extensions)
             {
-                if (f.EndsWith(ext))
+                if (f.ToLower().EndsWith(ext.ToLower()))
                 {
                     return true;
                 }
@@ -151,7 +216,7 @@ namespace Sift.Helpers
             f = f.ToLower();
             foreach (string keyword in Arguments.Keywords)
             {
-                if (f.Contains(keyword.ToLower()))
+                if (f.ToLower().Contains(keyword.ToLower()))
                 {
                     return true;
                 }
