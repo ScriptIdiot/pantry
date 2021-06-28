@@ -140,6 +140,8 @@ namespace Sift.Helpers
             Console.WriteLine("   {0,-15}Password to authenticate with", "-password");
             Console.WriteLine("   {0,-15}Keywords to look for in file names (Default: None)", "-keywords");
             Console.WriteLine("   {0,-15}Extensions to look for in file names (Default:  \"ps1\", \"docx\", \"docm\", \"xlsx\", \"xlsm\", \"xls\", \"hta\", \"vba\", \"vbs\")", "-extensions");
+            Console.WriteLine("   {0,-15}Specify the shares to look through", "-shares");
+            Console.WriteLine("   {0,-15}Specify the shares to AVOID", "-eshares");
             Console.WriteLine("   {0,-15}Random sleep between 0 and X", "-jitter");
             Console.WriteLine("   {0,-15}Enable/Disable the default TCP check", "-tcp");
             Console.WriteLine("   {0,-15}Loop through targets randomly", "-randomise");
@@ -152,6 +154,8 @@ namespace Sift.Helpers
             Console.WriteLine("   PS> Sift.exe -targets=\"auto\" -username=\"administrator\" -password=\"Password1\" -domain=\"lab.local\"");
             Console.WriteLine("   PS> Sift.exe -targets=\"c:\\temp\\computers.txt\" -username=\"administrator\" -password=\"Password1\" -domain=\"lab.local\"");
             Console.WriteLine("   PS> Sift.exe -targets=\"192.168.0.12-192.168.0.24\" -username=\"administrator\" -password=\"Password1\" -domain=\"lab.local\"");
+            Console.WriteLine("   PS> Sift.exe -targets=\"192.168.0.12-192.168.0.24\" -username=\"administrator\" -password=\"Password1\" -domain=\"lab.local\" -shares=\"DEV\"");
+            Console.WriteLine("   PS> Sift.exe -targets=\"192.168.0.12-192.168.0.24\" -username=\"administrator\" -password=\"Password1\" -domain=\"lab.local\" -eshares=\"c$\"");
             Console.WriteLine("   PS> Sift.exe -targets=\"192.168.0.12-192.168.0.24\" -username=\"administrator\" -password=\"Password1\" -domain=\"lab.local\" -extensions=\"ps1,hta,vba,vbs\"");
             Console.WriteLine("   PS> Sift.exe -targets=\"192.168.0.12-192.168.0.24\" -username=\"administrator\" -password=\"Password1\" -domain=\"lab.local\" -keywords=\"passwords\"");
             Console.WriteLine("   PS> Sift.exe -targets=\"192.168.0.12-192.168.0.24\" -username=\"administrator\" -password=\"Password1\" -domain=\"lab.local\" -randomise=\"true\"");
