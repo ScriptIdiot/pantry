@@ -164,7 +164,7 @@ namespace Sift.Helpers
 
             try
             {
-                DirectoryEntry entry = new DirectoryEntry(Arguments.Domain);
+                DirectoryEntry entry = new DirectoryEntry("LDAP://" + Arguments.Domain);
                 if (Utilities.Creds.CheckIfCredsPresent())
                 {
                     entry.Username = Arguments.Username;
