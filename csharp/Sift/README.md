@@ -17,6 +17,14 @@
 The available options:
 
 ```
+            ~ Sift ~
+         />_________________________________
+[########[]_________________________________|
+         \>
+                        ~ mez0 ~
+
+PS> Sift.exe <arguments>
+
 OPTIONS:
    -targets       Targets to check
    -username      Username to authenticate with
@@ -24,9 +32,23 @@ OPTIONS:
    -password      Password to authenticate with
    -keywords      Keywords to look for in file names (Default: None)
    -extensions    Extensions to look for in file names (Default:  "ps1", "docx", "docm", "xlsx", "xlsm", "xls", "hta", "vba", "vbs")
+   -shares        Specify the shares to look through
+   -eshares       Specify the shares to AVOID
    -jitter        Random sleep between 0 and X
    -tcp           Enable/Disable the default TCP check
    -randomise     Loop through targets randomly
+
+EXAMPLES:
+   PS> Sift.exe -targets="192.168.0.0/24" -username="administrator" -password="Password1" -domain="lab.local"
+   PS> Sift.exe -targets="192.168.0.12" -username="administrator" -password="Password1" -domain="lab.local"
+   PS> Sift.exe -targets="auto" -username="administrator" -password="Password1" -domain="lab.local"
+   PS> Sift.exe -targets="c:\temp\computers.txt" -username="administrator" -password="Password1" -domain="lab.local"
+   PS> Sift.exe -targets="192.168.0.12-192.168.0.24" -username="administrator" -password="Password1" -domain="lab.local"
+   PS> Sift.exe -targets="192.168.0.12-192.168.0.24" -username="administrator" -password="Password1" -domain="lab.local" -shares="DEV"
+   PS> Sift.exe -targets="192.168.0.12-192.168.0.24" -username="administrator" -password="Password1" -domain="lab.local" -eshares="c$"
+   PS> Sift.exe -targets="192.168.0.12-192.168.0.24" -username="administrator" -password="Password1" -domain="lab.local" -extensions="ps1,hta,vba,vbs"
+   PS> Sift.exe -targets="192.168.0.12-192.168.0.24" -username="administrator" -password="Password1" -domain="lab.local" -keywords="passwords"
+   PS> Sift.exe -targets="192.168.0.12-192.168.0.24" -username="administrator" -password="Password1" -domain="lab.local" -randomise="true"
 ```
 
 Targets can take in any of the following:
@@ -121,7 +143,7 @@ PS C:\> .\Sift.exe -targets="10.10.11.38"
 [22:37:10] |_ Password: NULL
 
 [22:37:10] ==> Connecting to SMB on 1 host(s):
-[22:37:10] |_ 10.10.11.38 (TRAZOKU): OPEN
+[22:37:10] |_ 10.10.11.38 (DEV01): OPEN
 
 [22:37:10] ==> Targets with SMB Open: 1
 
