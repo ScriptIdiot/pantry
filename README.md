@@ -24,14 +24,14 @@ A repository full of random stuff that didn't deserve/need its own repository. S
 | [CSharpRunAs](/csharp/CSharpRunAs) |                   runas, but its in C#....                   |
 |     [ad_enum](/csharp/ad_enum)     |           Grab users, computers, trusts, etc :zzz:           |
 |    [Corellia](/csharp/Corellia)    | AD Long Hanging Fruit: Kerberoast, Descriptions and GPPPassword :apple: |
-|         [Papi](/cpp/Papi/)         | Small sub-section of [When Environmental Keying meets Crypto](/posts/when-environmental-keying-meets-crypto/) blog! |
+|         [Papi](/cpp/Papi/)         | Small sub-section of [When Environmental Keying meets Crypto](https://mez0.cc/posts/when-environmental-keying-meets-crypto/) blog! |
 
 ## C++
 
 |            Name            |                         Description                          |
 | :------------------------: | :----------------------------------------------------------: |
 | [Inject0r](/cpp/Inject0r/) | Few different methods of doing Allocation and Execution during Process Injection :zap: |
-|     [Papi](/cpp/Papi/)     | Code for [When Environmental Keying meets Crypto](/posts/when-environmental-keying-meets-crypto/) blog! |
+|     [Papi](/cpp/Papi/)     | Code for [When Environmental Keying meets Crypto](https://mez0.cc/posts/when-environmental-keying-meets-crypto/) blog! |
 
 ## Python
 
