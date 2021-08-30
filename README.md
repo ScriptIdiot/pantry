@@ -28,10 +28,11 @@ A repository full of random stuff that didn't deserve/need its own repository. S
 
 ## C++
 
-|            Name            |                         Description                          |
-| :------------------------: | :----------------------------------------------------------: |
-| [Inject0r](/cpp/Inject0r/) | Few different methods of doing Allocation and Execution during Process Injection :zap: |
-|     [Papi](/cpp/Papi/)     | Code for [When Environmental Keying meets Crypto](https://mez0.cc/posts/when-environmental-keying-meets-crypto/) blog! |
+|                  Name                   |                         Description                          |
+| :-------------------------------------: | :----------------------------------------------------------: |
+|       [Inject0r](/cpp/Inject0r/)        | Few different methods of doing Allocation and Execution during Process Injection :zap: |
+|           [Papi](/cpp/Papi/)            | Code for [When Environmental Keying meets Crypto](https://mez0.cc/posts/when-environmental-keying-meets-crypto/) blog! |
+| [dll-shenanigans](/cpp/dll-shenanigans) | Supporting code for [Exploring DLL Loads](https://mez0.cc/posts/exploring-dll-loads/). See the [dll-shenanigans/README](/cpp/dll-shenanigans) for more information :boom: |
 
 ## Python
 
