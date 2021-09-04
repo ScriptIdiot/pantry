@@ -1,0 +1,32 @@
+{
+    "registry": [
+    {
+        "Hive": "HKEY_LOCAL_MACHINE",
+        "Path": "SOFTWARE\\\\MICROSOFT\\\\CRYPTOGRAPHY",
+        "Key": "MachineGuid",
+        "Value": "fa20973d-6aee-40fa-90ce-b3169646c414"
+    },
+    {
+        "Hive": "HKEY_LOCAL_MACHINE",
+        "Path": "SOFTWARE\\\\Microsoft\\\\NET Framework Setup\\\\NDP\\\\v4\\\\Full",
+        "Key": "Version",
+        "Value": "4.8.03761"
+    }],
+    "variable": [
+    {
+        "Variable": "PROCESSOR_REVISION",
+        "Value": "2d07"
+    },
+    {
+        "Variable": "USERDNSDOMAIN",
+        "Value": "SHELBY.LOCAL"
+    },
+    {
+        "Variable": "PROCESSOR_IDENTIFIER",
+        "Value": "Intel64 Family 6 Model 45 Stepping 7, GenuineIntel"
+    },
+    {
+        "Variable": "USERPROFILE",
+        "Value": "C:\\Users\\tommy"
+    }]
+}
