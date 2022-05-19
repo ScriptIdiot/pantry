@@ -34,6 +34,7 @@ A repository full of random stuff that didn't deserve/need its own repository. S
 |           [Papi](/cpp/Papi/)            | Code for [When Environmental Keying meets Crypto](https://mez0.cc/posts/when-environmental-keying-meets-crypto/) blog! |
 | [dll-shenanigans](/cpp/dll-shenanigans) | Supporting code for [Exploring DLL Loads](https://mez0.cc/posts/exploring-dll-loads/). See the [dll-shenanigans/README](/cpp/dll-shenanigans) for more information :boom: |
 |         [greta](/python/greta)          | Automating Environmental Keying with Greta. Greta takes in a JSON File containing Environmental Variables and/or Registry Keys, uses them as AES Keys, and wraps it all up into a a single call. Json -> Python -> AES -> CPP. See [Greta: Windows Crypto, and Recursive Keying](https://mez0.cc/posts/greta-windows-crypto-environmental-keys/). |
+| [Heap Encryption](cpp/Heap Encryption)  | Code for: [Protecting the Heap: Encryption & Hooks](https://mez0.cc/posts/protecting-the-heap/)! |
 
 ## Python
 
